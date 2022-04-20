@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submenu css</title>
+</head>
+<style>
+    nav{
+        width: 100%;
+        height:100px;
+        background-color: brown;
+
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    ul li{
+        line-height: 100px;
+        /* transition: all 0.3s linear; */
+        color:white;
+        font-size: 20px;
+        font-family:'Calibri'
+    }
+    .submenu{
+        /* display: none; */
+       
+        background-color: brown;
+        flex-direction: column;
+width: 100%;
+transition:all 0.5s linear;
+       opacity: 0;
+       justify-content: flex-start;
+       visibility: hidden;
+       
+       
+    }
+    .submenu li{
+        line-height: 50px;
+        color:white;
+        font-size: 20px;
+        font-family:'Calibri';
+       
+    }
+    ul li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+     
+    }
+</style>
+<body>
+
+    <h1>submenu in css</h1>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Courses
+<ul class="submenu">
+    <li>php</li>
+    <li>python</li>
+    <li>java</li>
+
+</ul>
+
+
+            </li>
+            <li>Contact</li>
+
+        </ul>
+    </nav>
+    
+</body>
+</html>
